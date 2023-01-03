@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hori_guid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2463"
+
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verti_guid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.07733"
+
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/card_guid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.920" />
+
+
+    <!-- <com.google.android.material.card.MaterialCardView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:id="@+id/mat_card"
+         app:layout_constraintTop_toTopOf="@+id/hori_guid"
+         app:layout_constraintStart_toStartOf="@+id/verti_guid"
+         app:layout_constraintEnd_toEndOf="@+id/card_guid">-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/con_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/card_guid"
+        app:layout_constraintStart_toStartOf="@+id/verti_guid"
+        app:layout_constraintTop_toTopOf="@+id/hori_guid">
+
+        <!-- <View
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+
+             app:layout_constraintTop_toTopOf="parent"
+             />-->
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/img_guid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.728"
+
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_group_5"
+            app:layout_constraintStart_toEndOf="@+id/img_guid"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/uniq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_union"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_group" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/music"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Music"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/img_group"
+            app:layout_constraintTop_toBottomOf="@+id/txt_new"
+
+            />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/econo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Economics"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/music"
+
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="
+Get invested in music.Realy invested.
+Earn royally payouts and share the
+success of the tracks you love."
+            android:textColor="#808080"
+            app:autoSizeMaxTextSize="@dimen/text_size"
+            app:autoSizeMinTextSize="8sp"
+            app:autoSizeStepGranularity="1sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/econo"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guid_prog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7230" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/progg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_progree_steps"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guid_prog" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guid_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7892" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_shape"
+        android:text="Sign up"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/card_guid"
+        app:layout_constraintStart_toStartOf="@+id/verti_guid"
+        app:layout_constraintTop_toTopOf="@+id/guid_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

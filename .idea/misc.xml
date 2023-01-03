@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Nebula2/app/src/main/res/drawable/button_shape.xml" value="0.1095" />
+        <entry key="..\:/Nebula2/app/src/main/res/drawable/card_shape.xml" value="0.1055" />
+        <entry key="..\:/Nebula2/app/src/main/res/drawable/com_color.xml" value="0.1155" />
+        <entry key="..\:/Nebula2/app/src/main/res/drawable/ic_notification.xml" value="0.1155" />
+        <entry key="..\:/Nebula2/app/src/main/res/drawable/ic_play_button.xml" value="0.1155" />
+        <entry key="..\:/Nebula2/app/src/main/res/drawable/ic_subtext.xml" value="0.1095" />
+        <entry key="..\:/Nebula2/app/src/main/res/drawable/ic_vector.xml" value="0.1095" />
+        <entry key="..\:/Nebula2/app/src/main/res/drawable/text_shape.xml" value="0.1095" />
+        <entry key="..\:/Nebula2/app/src/main/res/drawable/text_shape2.xml" value="0.136" />
+        <entry key="..\:/Nebula2/app/src/main/res/drawable/txt_card_color.xml" value="0.105" />
+        <entry key="..\:/Nebula2/app/src/main/res/layout/activity_fragment.xml" value="0.13998482549317148" />
+        <entry key="..\:/Nebula2/app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="..\:/Nebula2/app/src/main/res/layout/activity_main2.xml" value="0.46125" />
+        <entry key="..\:/Nebula2/app/src/main/res/layout/fragment_fragmentone.xml" value="0.5" />
+        <entry key="..\:/Nebula2/app/src/main/res/layout/fragment_two.xml" value="0.13998482549317148" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
