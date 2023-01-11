@@ -30,23 +30,36 @@ class Fragment_lifecycle : Fragment() {
     lateinit var button: Button
     lateinit var rootView: View
 
+    lateinit var context1: Context
 
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        Log.d("Fragment_lifecycle", "onAttach ")
+        context1 = context as MainActivity3
+
+        Log.d("Fragment_lifecycle_1", "onAttach ")
         Toast.makeText(requireContext(), "onAttach_fragment 1", Toast.LENGTH_SHORT).show()
+
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        if (savedInstanceState != null) {
+
+        }
+        else
+        {
+            //
+        }
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
 
-            Log.d("Fragment_lifecycle", "onCreate ")
+            Log.d("Fragment_lifecycle_1", "onCreate ")
             Toast.makeText(requireContext(), "onCreate_fragment 1", Toast.LENGTH_SHORT).show()
         }
     }
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -54,39 +67,55 @@ class Fragment_lifecycle : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
 
-        Log.d("Fragment_lifecycle", "onCreateView ")
+        Log.d("Fragment_lifecycle_1", "onCreateView ")
         Toast.makeText(requireContext(), "onCreateView_fragment 1", Toast.LENGTH_SHORT).show()
 
+        context1 = context as MainActivity3
 
-       val View=  inflater.inflate(R.layout.fragment_lifecycle, container, false)
+
+        val View = inflater.inflate(R.layout.fragment_lifecycle, container, false)
 
         button = View.findViewById(R.id.fag_bt)
+
+
+
+        return View
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        Log.d("Fragment_lifecycle_1", "onViewCreated ")
+        Toast.makeText(requireContext(), "onViewCreated_fragment 1", Toast.LENGTH_SHORT).show()
 
         button.setOnClickListener {
 
             val manager: FragmentManager = requireActivity().supportFragmentManager
             val transaction: FragmentTransaction = manager.beginTransaction()
 
-            transaction.add(R.id.container_life, Fragment_lifecycle_b(),"Fragment b")
+            transaction.add(R.id.container_life, Fragment_lifecycle_b(), "Fragment b")
             transaction.addToBackStack("")
             transaction.commit()
 
         }
 
-        return View
     }
+
 
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        Log.d("Fragment_lifecycle", "onActivityCreated ")
+        Log.d("Fragment_lifecycle_1", "onActivityCreated ")
         Toast.makeText(requireContext(), "onActivityCreated_fragment 1", Toast.LENGTH_SHORT).show()
 
     }
 
+
+
+
     override fun onStart() {
         super.onStart()
-        Log.d("Fragment_lifecycle", "onStart ")
+        Log.d("Fragment_lifecycle_1", "onStart ")
         Toast.makeText(requireContext(), "onStart_fragment 1", Toast.LENGTH_SHORT).show()
 
 
@@ -94,39 +123,41 @@ class Fragment_lifecycle : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        Log.d("Fragment_lifecycle", "onResume ")
+        Log.d("Fragment_lifecycle_1", "onResume ")
         Toast.makeText(requireContext(), "onResume_fragment 1", Toast.LENGTH_SHORT).show()
     }
 
     override fun onPause() {
         super.onPause()
-        Log.d("Fragment_lifecycle", "onPause ")
+        Log.d("Fragment_lifecycle_1", "onPause ")
         Toast.makeText(requireContext(), "onPause_fragment 1", Toast.LENGTH_SHORT).show()
+
+
 
     }
 
     override fun onStop() {
         super.onStop()
 
-        Log.d("Fragment_lifecycle", "onStop ")
+        Log.d("Fragment_lifecycle_1", "onStop ")
         Toast.makeText(requireContext(), "onStop_fragment 1", Toast.LENGTH_SHORT).show()
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        Log.d("Fragment_lifecycle", "onDestroyView ")
+        Log.d("Fragment_lifecycle_1", "onDestroyView ")
         Toast.makeText(requireContext(), "onDestroyView_fragment 1", Toast.LENGTH_SHORT).show()
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.d("Fragment_lifecycle", "onDestroy ")
+        Log.d("Fragment_lifecycle_1", "onDestroy ")
         Toast.makeText(requireContext(), "onDestroy_fragment 1", Toast.LENGTH_SHORT).show()
     }
 
     override fun onDetach() {
         super.onDetach()
-        Log.d("Fragment_lifecycle", "onDetach ")
+        Log.d("Fragment_lifecycle_1", "onDetach ")
         Toast.makeText(requireContext(), "onDetach_fragment 1", Toast.LENGTH_SHORT).show()
 
     }

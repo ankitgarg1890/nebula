@@ -28,11 +28,15 @@ class Fragment_lifecycle_b : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+
     lateinit var rootView: View
+
+    lateinit var context1:Context
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        Log.d("Fragment_lifecycle_b", "onAttach ")
+        Log.d("Fragment_lifecycle_2", "onAttach ")
+
         Toast.makeText(requireContext(), "onAttach_fragment 2", Toast.LENGTH_SHORT).show()
     }
 
@@ -42,8 +46,10 @@ class Fragment_lifecycle_b : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
 
-            Log.d("Fragment_lifecycle_b", "onCreateView ")
+            Log.d("Fragment_lifecycle_2", "onCreateView ")
             Toast.makeText(requireContext(), "onCreateView_fragment 2", Toast.LENGTH_SHORT).show()
+
+
 
         }
     }
@@ -57,7 +63,7 @@ class Fragment_lifecycle_b : Fragment() {
 
 
 
-        Log.d("Fragment_lifecycle_b", "onCreateView ")
+        Log.d("Fragment_lifecycle_2", "onCreateView ")
 
 
         Toast.makeText(requireContext(), "onCreateView_fragment 2", Toast.LENGTH_SHORT).show()
@@ -73,16 +79,22 @@ class Fragment_lifecycle_b : Fragment() {
 
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        Log.d("Fragment_lifecycle_2", "onViewCreated ")
+        Toast.makeText(requireContext(), "onViewCreated_fragment 2", Toast.LENGTH_SHORT).show()
+    }
+   /* override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        Log.d("Fragment_lifecycle_b", "onActivityCreated ")
+        Log.d("Fragment_lifecycle_2", "onActivityCreated ")
         Toast.makeText(requireContext(), "onActivityCreated_fragment 2", Toast.LENGTH_SHORT).show()
 
-    }
+    }*/
 
     override fun onStart() {
         super.onStart()
-        Log.d("Fragment_lifecycle_b", "onStart ")
+        Log.d("Fragment_lifecycle_2", "onStart ")
         Toast.makeText(requireContext(), "onStart_fragment 2", Toast.LENGTH_SHORT).show()
 
 
@@ -90,13 +102,13 @@ class Fragment_lifecycle_b : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        Log.d("Fragment_lifecycle_b", "onResume ")
+        Log.d("Fragment_lifecycle_2", "onResume ")
         Toast.makeText(requireContext(), "onResume_fragment 2", Toast.LENGTH_SHORT).show()
     }
 
     override fun onPause() {
         super.onPause()
-        Log.d("Fragment_lifecycle_b", "onPause ")
+        Log.d("Fragment_lifecycle_2", "onPause ")
         Toast.makeText(requireContext(), "onPause_fragment 2", Toast.LENGTH_SHORT).show()
 
     }
@@ -104,27 +116,32 @@ class Fragment_lifecycle_b : Fragment() {
     override fun onStop() {
         super.onStop()
 
-        Log.d("Fragment_lifecycle_b", "onStop ")
+        Log.d("Fragment_lifecycle_2", "onStop ")
         Toast.makeText(requireContext(), "onStop_fragment 2", Toast.LENGTH_SHORT).show()
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        Log.d("Fragment_lifecycle_b", "onDestroyView ")
+        Log.d("Fragment_lifecycle_2", "onDestroyView ")
         Toast.makeText(requireContext(), "onDestroyView_fragment 2", Toast.LENGTH_SHORT).show()
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.d("Fragment_lifecycle_b", "onDestroy ")
+        Log.d("Fragment_lifecycle_2", "onDestroy ")
         Toast.makeText(requireContext(), "onDestroy_fragment 2", Toast.LENGTH_SHORT).show()
     }
 
     override fun onDetach() {
         super.onDetach()
-        Log.d("Fragment_lifecycle_b", "onDetach ")
+        Log.d("Fragment_lifecycle_2", "onDetach ")
         Toast.makeText(requireContext(), "onDetach_fragment 2", Toast.LENGTH_SHORT).show()
 
     }
+
+
+
+
+
 
 }
