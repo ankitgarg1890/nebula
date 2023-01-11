@@ -14,9 +14,18 @@
         <entry key="..\:/Nebula2/app/src/main/res/drawable/text_shape2.xml" value="0.136" />
         <entry key="..\:/Nebula2/app/src/main/res/drawable/txt_card_color.xml" value="0.105" />
         <entry key="..\:/Nebula2/app/src/main/res/layout/activity_fragment.xml" value="0.13998482549317148" />
-        <entry key="..\:/Nebula2/app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="..\:/Nebula2/app/src/main/res/layout/activity_main.xml" value="0.2125114995400184" />
         <entry key="..\:/Nebula2/app/src/main/res/layout/activity_main2.xml" value="0.46125" />
+        <entry key="..\:/Nebula2/app/src/main/res/layout/activity_main3.xml" value="0.15989159891598917" />
+        <entry key="..\:/Nebula2/app/src/main/res/layout/activity_main_activitynavi.xml" value="0.46125" />
+        <entry key="..\:/Nebula2/app/src/main/res/layout/activity_main_navi2.xml" value="0.46125" />
+        <entry key="..\:/Nebula2/app/src/main/res/layout/activity_main_service.xml" value="0.46125" />
+        <entry key="..\:/Nebula2/app/src/main/res/layout/fragment__a.xml" value="0.46125" />
+        <entry key="..\:/Nebula2/app/src/main/res/layout/fragment__b.xml" value="0.46125" />
+        <entry key="..\:/Nebula2/app/src/main/res/layout/fragment__c.xml" value="0.46125" />
         <entry key="..\:/Nebula2/app/src/main/res/layout/fragment_fragmentone.xml" value="0.5" />
+        <entry key="..\:/Nebula2/app/src/main/res/layout/fragment_lifecycle.xml" value="0.4275" />
+        <entry key="..\:/Nebula2/app/src/main/res/layout/fragment_lifecycle_b.xml" value="0.46125" />
         <entry key="..\:/Nebula2/app/src/main/res/layout/fragment_two.xml" value="0.13998482549317148" />
       </map>
     </option>

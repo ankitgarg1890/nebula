@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+
+
 }
 
 android {
@@ -31,6 +33,7 @@ android {
     }
     buildFeatures{
         dataBinding = true
+        viewBinding true
     }
 }
 
@@ -64,6 +67,8 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-livedata-core-ktx:2.5.1")
     // Lifecycles only (without ViewModel or LiveData)
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.5.1")
+//  Service
 
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
 
 }
