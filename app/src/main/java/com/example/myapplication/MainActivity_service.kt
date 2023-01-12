@@ -120,6 +120,7 @@ class MainActivity_service : AppCompatActivity() {
 
     companion object {
 
+
         private const val PERMISSION_REQUEST_ACCESS_LOCATION = 100
 
     }
